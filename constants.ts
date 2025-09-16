@@ -1,0 +1,2 @@
+
+export const OFFER_COUNTDOWN_SECONDS = 20;

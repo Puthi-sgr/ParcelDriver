@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Driver Delivery App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root {
+        --color-background: #f8fafc; /* Slate 50 (Bright, Not Grey) */
+        --color-surface: #ffffff;    /* White */
+        --color-primary: #65a30d;     /* Lime Green */
+        --color-secondary: #94a3b8;  /* Slate 400 */
+        --color-accent: #65a30d;      /* Lime Green */
+        --color-success: #84cc16;    /* Bright Lime */
+        --color-danger: #ef4444;     /* Red 500 */
+        --color-warning: #f59e0b;    /* Amber 500 */
+        --color-text-primary: #1e293b; /* Slate 800 */
+        --color-text-secondary: #64748b; /* Slate 500 */
+        --color-border: #e2e8f0;      /* Slate 200 (Subtle) */
+      }
+
+      @keyframes slide-up {
+        from { transform: translateY(100%); }
+        to { transform: translateY(0); }
+      }
+      
+      @keyframes draw-line {
+        to { stroke-dashoffset: 0; }
+      }
+
+      @keyframes ping-slow {
+        75%, 100% {
+            transform: scale(1.5);
+            opacity: 0;
+        }
+      }
+      @keyframes ping-slower {
+          75%, 100% {
+              transform: scale(2);
+              opacity: 0;
+          }
+      }
+
+      .animate-slide-up {
+        animation: slide-up 0.5s ease-out forwards;
+      }
+
+      .animate-draw-line {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: draw-line 3.5s ease-out forwards;
+      }
+
+      .animate-ping-slow { animation: ping-slow 1.5s cubic-bezier(0, 0, 0.2, 1) infinite; }
+      .animate-ping-slower { animation: ping-slower 2s cubic-bezier(0, 0, 0.2, 1) infinite; }
+
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "react-icons": "https://aistudiocdn.com/react-icons@^5.5.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-[var(--color-background)] text-[var(--color-text-primary)]">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+{
+  "name": "Driver Delivery Workflow App",
+  "description": "A mobile-first Driver App for a parcel/food delivery platform that executes a finite state workflow, from receiving an offer to completing a delivery with proof.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
